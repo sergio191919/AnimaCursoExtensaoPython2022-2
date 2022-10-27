@@ -1,34 +1,11 @@
-# comando input(): quero permitir que
-# o usuário digite algo...
-nome = input("nome: ")
-#pede a idade para o usuário "Qual sua idade?"
-idade = int(input("idade: "))
-
-#comando de saída..exibir na tela
-print(f"Boa noite, seu nome é {nome}")
-#exiba "Sua idade é ..."
-print("Sua idade é {}".format(idade))
-
-#e se eu quisesse mostrar o DOBRO da idade informada?
-dobro = idade * 2
-print("O dobro da idade informada é {}".format(dobro))
-
-#Estrutura condicional - o famoso "SE" (if)
-#Se a pessoa for maior de idade, mostre "Você é maior de idade, ótimo! Já pode beber ou dirigir"
-if idade >= 18:
-  print("Você é maior de idade, ótimo! Já pode beber ou dirigir")
-#Estrutura condicional - o famoso "SE" (if)
-#Se a pessoa for maior de idade, mostre "Você é maior de idade, ótimo! Já pode beber ou dirigir"
-if idade >= 18:
-  print("Você é maior de idade, ótimo! Já pode beber ou dirigir")
+#Pede o nome do aluno e sua nota (de 0 a 10) e, se ele tirou nota 10, mostra "Você é bichão, mesmo..."
+nome = input("Informe seu nome: ")
+nota = float(input("Digite sua nota de 0 a 10: "))
+if nota == 10:
+  print(f"{nome}, você é o bichão mermo...")
+if (nota == 10):
+print(f" {nome}, você é o bichão memo em...)"
+elif (nota >= 6 and nota <10):
+ print(f"{nome}, bom trabalho amigão")
 else:
-  print("Você é xóven ainda, xóven ainda...")
-#E se eu quisessem perguntar o gênero (M = Masculino e F = Feminino)
-#Mostre (...e você também precisa/precisou prestar o serviço militar obrigatório)
-
-
-
-print("vai ser executada de qualquer jeito")
-genero = input("Informe o gênero M=Masculino, F=Feminino, O=Outros")
-if idade >= 18 and genero == "M":
- print("...e você também precisa/precisou prestar o serviço militar obrigatório")
+ print("burro não tirou dez...")
