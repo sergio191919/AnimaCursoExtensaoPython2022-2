@@ -1,19 +1,17 @@
-#1o. passo: importar a biblioteca sqlite3
-import sqlite3
+con, cur = bd.conectar()
 
-#2o. passo: Vamos estabelecer uma 
-#conexão com o banco de dados
-conexao = sqlite3.connect("dc_universe.db")
+nome = input("Informe o nome do herói/vilão: ")
+nome_civil = input("Informe o nome civil do herói/vilão (sua identidade secreta): ")
+tipo_numerico = input("Tecle 1 para Herói(na) ou 2 para Vilã(o)")
 
-#3o. passo: criar um objeto do tipo cursor
-cursor = conexao.cursor()
+#Consulta para o valor máximo usado no banco
+sql = "SELECT MAX(pessoa_id)+1 FROM pessoas"
+cur.execute(sql)
+pessoa_id = cur.fetchone()[0]
 
-#4o. passo: comando para inserir um herói/vilão
-sql = "INSERT INTO pessoas (pessoa_id, nome, nome_civil, tipo) VALUES (12, 'The Flash', 'Barry Allen', 'Herói(na)')"
+if tipo_numerico == "1":
+  tipo = "Herói(na)"
+else:
+  tipo = "Vilã(o)"
 
-#5o. passo: Executar o comando SQL
-cursor.execute(sql)
-
-#6o. passo: Confirmar o INSERT com commit() e fechar o banco
-conexao.commit()
-conexao.close()
+sql = f"INSERT INTO pessoas (pessoa_id, nome, nome_civil, tipo) VALUES ({pessoa_id}, '{nome}', '{nome_civil}', '{tipo}')"
