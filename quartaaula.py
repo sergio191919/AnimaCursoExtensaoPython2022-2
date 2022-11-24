@@ -1,6 +1,6 @@
 con, cur = bd.conectar()
 
-nome = input("Informe o nome do herói/vilão: ")
+si("Informe o nome do herói/vilão: ")
 nome_civil = input("Informe o nome civil do herói/vilão (sua identidade secreta): ")
 tipo_numerico = input("Tecle 1 para Herói(na) ou 2 para Vilã(o)")
 

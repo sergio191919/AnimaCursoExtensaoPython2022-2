@@ -30,5 +30,5 @@ else:
 
 print("vai ser executada de qualquer jeito")
 genero = input("Informe o gênero M=Masculino, F=Feminino, O=Outros")
-if idade >= 18 and genero == "M":
+
  print("...e você também precisa/precisou prestar o serviço militar obrigatório")
